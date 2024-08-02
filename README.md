@@ -3,7 +3,7 @@
 Reference: **[click here](https://gianmarco.netlify.app/)**
 
 - svelte-icons
-- @sveltejs/adapter-ghpages
+- @sveltejs/adapter-gh-pages
 
 # Steps ▶️
 
@@ -27,9 +27,10 @@ $ npm install
 $ npm run dev
 ```
 
-# Deploy on ghpages 🚀
-
+# Deploy on gh-pages 🚀
 You just need to fork this repo and linking it to your Github account.
+$ npm install -D @sveltejs/adapter-static gh-pages
+$ npm run gh-pages
 
 ## Authors ❤️
 
