@@ -27,10 +27,11 @@ $ npm install
 $ npm run dev
 ```
 
-# Deploy on gh-pages 🚀
-You just need to fork this repo and linking it to your Github account.
-$ npm install -D @sveltejs/adapter-static gh-pages
+# Deploy with gh-pages 🚀
+
+```
 $ npm run gh-pages
+```
 
 ## Authors ❤️
 

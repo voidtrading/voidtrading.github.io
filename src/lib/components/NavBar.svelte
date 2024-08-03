@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Burger from './Hamburger.svelte';
 	import Logo from '$lib/assets/icons8-circled-v-50.png';
 	import routes from '$lib/NavRoutes';
