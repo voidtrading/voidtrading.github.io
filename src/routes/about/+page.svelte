@@ -54,14 +54,14 @@
 <style>
 	.container {
 		max-width: 900px;
-		padding: 0;
+		padding: 20px;
 		display: flex;
 		justify-content: center;
 	}
 
 	main {
 		max-width: 100%;
-		padding: 20px;
+		/*padding: 20px;*/
 		min-height: 500px;
 		text-align: left;
 		margin: 0 auto;
@@ -80,26 +80,20 @@
 	}
 
 	.projectContainer {
-		width: 100%;
+		width: 80%;
 		max-width: 900px;
 		display: flex;
-		justify-content: center;
+		flex-wrap: wrap; /* 자동 줄 바꿈을 허용 */
+		justify-content: space-between; /* 요소를 가로 중앙으로 정렬 */
 		box-sizing: border-box;
 		text-align: center;
 		padding: 2px;
-		/*margin: 0 auto;*/
-		text-align: center;
+		margin: 0 auto;
+		/*text-align: center;*/
 	}
 
 	a {
 		text-decoration: none;
-	}
-
-	.projectContainer .projects {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: 40px;
-		margin-top: 30px;
 	}
 
 	.project {
@@ -108,12 +102,14 @@
 		display: flex;
 		flex-direction: column;
 		color: white;
-		background: #111;
+		/*background: #111;*/
+		background: #4169E1;
 		padding: 2rem;
-		width: 100%;
-		border-radius: 5px;
-		transition: transform 0.2s ease-in-out;
+		width: calc(33.33% - 10px); /* 3개를 한 줄에 놓을 수 있도록 설정 */
+		margin: 8px; /* 요소 간의 여백 */
+		/*width: 100%;*/
 		border-radius: 25px;
+		transition: transform 0.2s ease-in-out;
 	}
 
 	.project p {
@@ -132,6 +128,7 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
 	.techs > div {
 		margin: 0 0 0 10px;
 	}
@@ -142,6 +139,25 @@
 		}
 		main > h1 {
 			font-size: 48px;
+		}
+		.container {
+			padding: 0;
+		}
+		.project {
+			width: calc(30% - 16px); /* 2개를 한 줄에 놓도록 조정 */
+		}
+	}
+
+	/* 작은 화면에 대한 반응형 조정 */
+	@media (max-width: 768px) {
+		.project {
+			width: calc(50% - 16px); /* 2개를 한 줄에 놓도록 조정 */
+		}
+	}
+
+	@media (max-width: 480px) {
+		.project {
+			width: calc(100% - 16px); /* 1개를 한 줄에 놓도록 조정 */
 		}
 	}
 </style>

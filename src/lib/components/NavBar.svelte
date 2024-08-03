@@ -11,7 +11,7 @@
 	<div class="innerContainer">
 		<a href="/" class="innerContainerText">
 <!--			<img src={Logo} alt="logo" class="logo"/>-->
-			&nbsp;<div class="styled-container">VOID</div><div class="styled-2-container">TRADING</div>
+			<div class="styled-container">VOID</div><div class="styled-2-container">TRADING</div>
 		</a>
 		<div class="burger">
 			<Burger bind:open={opened} />
@@ -26,7 +26,7 @@
 	</div>
 	<div class="responsiveButtons buttons">
 		{#each routes as route}
-			<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
+			<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href} on:click={() => (opened = false)}
 				>{route.label}</a
 			>
 		{/each}
@@ -138,16 +138,10 @@
       color: #f5f5f5; /* 글자 색상 */
       text-decoration: none; /* 밑줄 제거 */
       font-weight: bold; /* 글자 굵기 */
-      padding: 10px 15px; /* 안쪽 여백 */
+      /*padding: 1px 1px; !* 안쪽 여백 *!*/
       border-radius: 5px; /* 모서리 둥글게 */
       transition: background-color 0.3s, color 0.3s; /* 호버 효과 전환 시간 */
 	}
-
-  .innerContainerText:hover {
-      background-color: #e0e0e0; /* 호버 시 배경색 */
-      color: #000; /* 호버 시 글자 색상 */
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 글자 그림자 */
-  }
 
 	.NavBar {
 		display: flex;

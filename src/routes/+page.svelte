@@ -33,7 +33,7 @@
 
 
 		<a
-			href="https://www.linkedin.com/"
+			href="https://www.linkedin.com/company/81807913"
 			aria-label="Linkedin"
 			target="_blank"
 			rel="noopener noreferrer"

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from '$lib/components/NavBar.svelte';
 	import Button from '$lib/components/Button.svelte';
+	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import Tooltip from '$lib/components/Tooltip.svelte';
 	// import { beforeNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
@@ -105,6 +106,9 @@
 							}, 500);
 						}}
 					>
+						<div>
+							<FaCopy />
+						</div>
 					</div>
 				</Tooltip>
 			</div>

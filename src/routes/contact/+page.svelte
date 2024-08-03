@@ -44,14 +44,14 @@
 <style>
     .container {
         max-width: 900px;
-        padding: 0;
+        padding: 20px;
         display: flex;
         justify-content: center;
     }
 
     main {
         max-width: 100%;
-		padding: 15px;
+		/*padding: 15px;*/
         min-height: 500px;
         text-align: left;
         margin: 0 auto;
@@ -111,6 +111,7 @@
 		display: flex;
 		flex-direction: column;
 		color: white;
+		/*background: #555555;*/
 		background: #111;
 		padding: 2rem;
 		width: 100%;
@@ -143,5 +144,8 @@
         main > h1 {
             font-size: 48px;
         }
-    }
+		.container {
+			padding: 0;
+		}
+	}
 </style>
