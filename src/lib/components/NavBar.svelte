@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Burger from './Hamburger.svelte';
-	import Logo from '$lib/assets/icons8-circled-v-50.png';
+	import Logo from '$lib/assets/logo.svg';
 	import routes from '$lib/NavRoutes';
 	let opened = false;
 	export let segment: string;
@@ -11,7 +11,7 @@
 	<div class="innerContainer">
 		<a href="/" class="innerContainerText">
 <!--			<img src={Logo} alt="logo" class="logo"/>-->
-			VOID TRADING
+			&nbsp;<div class="styled-container">VOID</div><div class="styled-2-container">TRADING</div>
 		</a>
 		<div class="burger">
 			<Burger bind:open={opened} />
@@ -36,8 +36,15 @@
 <style>
 	:global(.logo) {
 		cursor: pointer;
-		height: 30px;
-		width: 30px;
+		height: 16px;
+		width: 16px;
+	}
+
+	:global(.line) {
+		width: 100%; /* 선의 너비를 전체의 80%로 설정 */
+		height: 0.3px; /* 선의 두께 */
+		background-color: #ffffff; /* 선의 색상 */
+		margin: 50px auto; /* 상하 여백과 수평 중앙 정렬 */
 	}
 
 	.open {
@@ -70,6 +77,42 @@
 		width: 100%;
 		position: absolute;
 		bottom: 0;
+	}
+
+	/* styles.css */
+
+	.styled-container {
+		background-color: #ffffff; /* 흰색 배경 */
+		color: #000000;           /* 검은색 글자 */
+		padding: 0.005px 5px;            /* 안쪽 여백 */
+		border: 1px solid #ddd;   /* 얇은 경계선 */
+		/*border-radius: 5px;       !* 모서리를 둥글게 *!*/
+		font-family: Arial, sans-serif; /* 글꼴 설정 */
+		max-width: 600px;         /* 최대 너비 */
+		max-height: 40px;
+		margin: 20px auto;        /* 중앙 정렬을 위한 자동 여백 */
+	}
+
+	.styled-2-container {
+		background-color: #ca3c25; /* 흰색 배경 */
+		color: #ffffff;           /* 검은색 글자 */
+		padding: 0.005px 5px;            /* 안쪽 여백 */
+		border: 1px solid #ddd;   /* 얇은 경계선 */
+		/*border-radius: 5px;       !* 모서리를 둥글게 *!*/
+		font-family: Arial, sans-serif; /* 글꼴 설정 */
+		max-width: 600px;         /* 최대 너비 */
+		max-height: 40px;
+		margin: 20px auto;        /* 중앙 정렬을 위한 자동 여백 */
+	}
+
+	.styled-container h1 {
+		font-size: 2em;           /* 큰 제목 글자 크기 */
+		margin-bottom: 10px;      /* 아래쪽 여백 */
+	}
+
+	.styled-container p {
+		font-size: 1em;           /* 일반 텍스트 글자 크기 */
+		line-height: 1.6;         /* 줄 간격 */
 	}
 
 	.innerContainer {

@@ -1,5 +1,6 @@
 <script>
-	import skills from '$lib/Skills';
+	import members from '$lib/Members';
+	import projects from '$lib/Projects';
 </script>
 
 <svelte:head>
@@ -20,23 +21,33 @@
 			<br/>
 			“VOID” means an empty space or void, symbolizing the exploration and discovery of new possibilities. In other words, we strive to be an innovative trading company that fills existing gaps and pushes boundaries.
 		</p>
-<!--		<h2>Skills</h2>-->
-<!--		{#each Object.entries(skills) as [section, technologies]}-->
-<!--			<ul>-->
-<!--				<li>-->
-<!--					<h4>-->
-<!--						{section}:-->
-<!--					</h4>-->
-<!--					<div class="list">-->
-<!--						{#each technologies as technology}-->
-<!--							<div>-->
-<!--								{technology}-->
-<!--							</div>-->
-<!--						{/each}-->
-<!--					</div>-->
-<!--				</li>-->
-<!--			</ul>-->
-<!--		{/each}-->
+
+		<div class="line"></div>
+		<h1>Members</h1>
+		<div class="projectContainer">
+			{#each members as member}
+				<div class="project">
+					<div class="header">
+						<h2>
+							{member.name}
+						</h2>
+						<div class="techsContainer">
+							<div class="techs">
+								<ul>
+									<li>
+										{member.responsibility}
+									</li>
+									<li>
+										{member.description}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				&nbsp; &nbsp;
+			{/each}
+		</div>
 	</main>
 </div>
 
@@ -50,6 +61,7 @@
 
 	main {
 		max-width: 100%;
+		padding: 20px;
 		min-height: 500px;
 		text-align: left;
 		margin: 0 auto;
@@ -58,19 +70,70 @@
 
 	h1 {
 		font-weight: 700;
-		margin: 0 0 50px 0;
+		margin: 0 0 35px 0;
 		font-size: 36px;
 		text-align: start;
 	}
 
 	h2 {
-		margin-top: 50px;
+		margin-top: 20px;
 	}
 
-	.list {
+	.projectContainer {
+		width: 100%;
+		max-width: 900px;
+		display: flex;
+		justify-content: center;
+		box-sizing: border-box;
+		text-align: center;
+		padding: 2px;
+		/*margin: 0 auto;*/
+		text-align: center;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.projectContainer .projects {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 40px;
+		margin-top: 30px;
+	}
+
+	.project {
+		text-align: start;
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
-		gap: 30px;
+		color: white;
+		background: #111;
+		padding: 2rem;
+		width: 100%;
+		border-radius: 5px;
+		transition: transform 0.2s ease-in-out;
+		border-radius: 25px;
+	}
+
+	.project p {
+		font-weight: 100;
+		color: #708090;
+	}
+
+	.techsContainer {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.techs {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.techs > div {
+		margin: 0 0 0 10px;
 	}
 
 	@media (min-width: 900px) {

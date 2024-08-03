@@ -1,4 +1,6 @@
 # .gitignore
 
 # Dependencies
+.svelte-kit
 node_modules
+build
