@@ -13,7 +13,7 @@
 	</h1>
 	<h2>
 		proprietary high frequency trading firm<br />
-		based in Republic of Korea
+		based in Korea
 	</h2>
 	<div class="icons">
 		<div
