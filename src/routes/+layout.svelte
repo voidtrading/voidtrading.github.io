@@ -130,9 +130,13 @@
 	}
 
 	@font-face {
-		font-family: 'Fira Code', monospace;
+		/*font-family: 'Fira Code', monospace;*/
 		font-display: optional;
 		src: url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+		font-family: "Nanum Myeongjo", serif;
+		font-weight: 400;
+		font-style: normal;
+		/*src: url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@200..900&display=swap');*/
 	}
 
 	:global(#svelte) {

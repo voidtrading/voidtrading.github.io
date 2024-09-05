@@ -18,7 +18,8 @@
 						</h2>
 					</div>
 					<p>
-							VOID TRADING, 6F, 114 Bongeunsa-ro, Gangnam-gu, Seoul, Korea
+							VOID TRADING, 502, 27, Seocho-daero 74-gil, Seocho-gu, Seoul (Hanwha Obelisk)<br/>
+						    서울시 서초구 서초대로74길 27 502호 (한화오벨리스크)
 					</p>
 				</div>
 

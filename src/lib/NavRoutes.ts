@@ -16,6 +16,10 @@ const routes = [
 	// 	label: 'Blog'
 	// }
 	{
+		href: '/notice',
+		label: 'Notice'
+	},
+	{
 		href: '/contact',
 		label: 'Contact'
 	}
