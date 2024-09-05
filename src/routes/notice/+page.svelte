@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <p>
-                            {notice.description}
+                            {@html notice.description}
                         </p>
                         <a href={notice.appendix_path} target="_blank" rel="noreferrer">
                             <div class="button">첨부파일 ({notice.appendix_name})</div>
