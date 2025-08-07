@@ -18,8 +18,8 @@
 						</h2>
 					</div>
 					<p>
-							VOID TRADING, 502, 27, Seocho-daero 74-gil, Seocho-gu, Seoul (Hanwha Obelisk)<br/>
-						    서울시 서초구 서초대로74길 27 502호 (한화오벨리스크)
+							VOID TRADING, 217, 125, Bongeunsa-ro, Gangnam-gu, Seoul (SPARKPLUS)<br/>
+						    서울시 서초구 봉은사로 125, 217호 (스파크플러스)
 					</p>
 				</div>
 

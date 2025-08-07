@@ -121,7 +121,7 @@
 <slot />
 
 <footer>
-	Copyright © <a class="me" href="/about">VOID TRADING Ltd</a> 2024
+	Copyright © <a class="me" href="/about">VOID TRADING Ltd</a> 2025
 </footer>
 
 <style>
