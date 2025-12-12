@@ -16,12 +16,12 @@ const routes = [
 		label: 'Career'
 	},
 	{
-		href: '/contact',
-		label: 'Contact'
-	},
-	{
 		href: '/notice',
 		label: 'Notice'
+	},
+	{
+		href: '/contact',
+		label: 'Contact'
 	}
 ];
 

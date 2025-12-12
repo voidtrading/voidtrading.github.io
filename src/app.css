@@ -337,7 +337,7 @@ p {
 /* Page Heroes - Different colors per page */
 .page-hero {
   color: #ffffff;
-  padding: calc(var(--header-h) + 56px) 0 64px;
+  padding: calc(var(--header-h) - 5px) 0 48px;
   position: relative;
   overflow: hidden;
 }
@@ -633,6 +633,11 @@ p {
 }
 
 .menu-panel {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  z-index: 49;
   border-top: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.96);
   -webkit-backdrop-filter: blur(12px);
