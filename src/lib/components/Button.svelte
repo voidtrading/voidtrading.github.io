@@ -1,39 +1,24 @@
-<script>
-	import { goto } from '$app/navigation';
-	import { Email } from '$lib/Constants';
-
-	function mailto() {
-		window.location.href = `mailto:${Email}`;
-	}
+<script lang="ts">
+	export let href: string | undefined = undefined;
+	export let target: string | undefined = undefined;
+	export let rel: string | undefined = undefined;
+	export let variant: 'light' | 'default' = 'default';
+	export let ariaLabel: string | undefined = undefined;
+	export let type: 'button' | 'submit' | 'reset' = 'button';
 </script>
 
-<div
-	class="button"
-	role="button"
-	tabindex="0"
-	on:keydown={mailto}
-	on:click={mailto}
->
-	<slot />
-</div>
-
-<style>
-	.button {
-		cursor: pointer;
-		height: 40px;
-		max-width: 200px;
-		border-radius: 10px;
-		background: #ca3c25;
-
-		background-size: 150% 150%;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-weight: 500;
-	}
-
-	.button:hover {
-		animation: gradient 2s ease infinite;
-	}
-</style>
+{#if href}
+	<a
+		class={`btn ${variant === 'light' ? 'btn--light' : ''}`}
+		{href}
+		{target}
+		{rel}
+		aria-label={ariaLabel}
+	>
+		<slot />
+	</a>
+{:else}
+	<button class={`btn ${variant === 'light' ? 'btn--light' : ''}`} {type} aria-label={ariaLabel}>
+		<slot />
+	</button>
+{/if}

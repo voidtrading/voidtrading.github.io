@@ -5,23 +5,23 @@ const routes = [
 	},
 	{
 		href: '/about',
-		label: 'About'
+		label: 'About us'
 	},
-	// {
-	// 	href: '/projects',
-	// 	label: 'Projects'
-	// },
-	// {
-	// 	href: '/blog',
-	// 	label: 'Blog'
-	// }
 	{
-		href: '/notice',
-		label: 'Notice'
+		href: '/culture',
+		label: 'Culture'
+	},
+	{
+		href: '/career',
+		label: 'Career'
 	},
 	{
 		href: '/contact',
 		label: 'Contact'
+	},
+	{
+		href: '/notice',
+		label: 'Notice'
 	}
 ];
 

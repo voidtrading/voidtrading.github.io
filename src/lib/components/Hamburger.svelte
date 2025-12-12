@@ -4,7 +4,7 @@
 
 <button
 	aria-label="menu-burger-button"
-	class="text-gray-500 hover:text-gray-700 cursor-pointer mr-4 border-none focus:outline-none"
+	class="burger"
 	class:open
 	on:click={() => (open = !open)}
 >
@@ -28,13 +28,25 @@
 	}
 
 	button {
-		color: white;
+		color: var(--fg);
 		background: transparent;
-		border: transparent;
+		border: 1px solid var(--line);
+		border-radius: 999px;
+		width: 40px;
+		height: 40px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		z-index: 20;
+	}
+
+	button:hover {
+		border-color: var(--line-strong);
+	}
+
+	button:focus-visible {
+		outline: 2px solid var(--fg);
+		outline-offset: 2px;
 	}
 
 	.open svg {

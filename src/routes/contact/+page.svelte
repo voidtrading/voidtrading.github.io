@@ -1,152 +1,56 @@
-<script>
-	import skills from '$lib/Skills';
+<script lang="ts">
+	import { Email } from '$lib/Constants';
 </script>
 
 <svelte:head>
 	<title>VOID TRADING — Contact</title>
 </svelte:head>
 
-<div class="container">
-	<main>
-		<h1>Contact</h1>
-		<div class="projectContainer">
-			<div class="projects">
-				<div class="project">
-					<div class="header">
-						<h2>
-							Address
-						</h2>
-					</div>
-					<p>
-							VOID TRADING, 217, 125, Bongeunsa-ro, Gangnam-gu, Seoul (SPARKPLUS)<br/>
-						    서울시 서초구 봉은사로 125, 217호 (스파크플러스)
-					</p>
-				</div>
+<section class="page-hero page-hero--contact">
+	<div class="container">
+		<div class="kicker">Contact</div>
+		<h1>연락처</h1>
+		<p class="lead">문의나 협업 제안은 이메일로 연락 주세요</p>
+	</div>
+</section>
 
-				<div class="project">
-					<div class="header">
-						<h2>
-							Email
-						</h2>
-					</div>
-					<p>
-						void@void-trading.com
-					</p>
+<section class="section">
+	<div class="container">
+		<div class="grid grid-2">
+			<div class="card">
+				<div class="card-title">
+					<h3>Address</h3>
+					<span class="muted2">Seoul</span>
+				</div>
+				<p class="muted">
+					서울시 강남구 봉은사로 125, 217호<br />
+					(스파크플러스)
+				</p>
+			</div>
+
+			<div class="card">
+				<div class="card-title">
+					<h3>Email</h3>
+					<span class="muted2">Primary</span>
+				</div>
+				<p class="muted">{Email}</p>
+				<div class="actions" style="margin-top: 12px">
+					<a class="btn btn--light" href={`mailto:${Email}`}>Send email</a>
 				</div>
 			</div>
 		</div>
+	</div>
+</section>
 
-		<div class="line"></div>
-		<h2>Join our journey</h2>
-		We are not actively hiring, but we will look at applications. Feel free to contact us anytime.
-	</main>
-</div>
-
-<style>
-    .container {
-        max-width: 900px;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-    }
-
-    main {
-        max-width: 100%;
-		/*padding: 15px;*/
-        min-height: 500px;
-        text-align: left;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-
-    h1 {
-        font-weight: 700;
-        margin: 0 0 35px 0;
-        font-size: 36px;
-        text-align: start;
-    }
-
-    h2 {
-        margin-top: 5px;
-    }
-
-    .list {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-	.projectContainer {
-		width: 100%;
-		max-width: 900px;
-		display: flex;
-		justify-content: center;
-		box-sizing: border-box;
-		text-align: center;
-		padding: 1em;
-		margin: 0 auto;
-		text-align: center;
-	}
-
-	.note {
-		opacity: 0.5;
-		margin: 0;
-		max-width: 900px;
-		text-align: left;
-	}
-
-	a {
-		text-decoration: none;
-	}
-
-	.projectContainer .projects {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: 20px;
-		margin-top: 1px;
-	}
-
-	.project {
-		text-align: start;
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: column;
-		color: white;
-		/*background: #555555;*/
-		background: #111;
-		padding: 2rem;
-		width: 100%;
-		border-radius: 5px;
-		transition: transform 0.2s ease-in-out;
-		border-radius: 25px;
-	}
-
-	.project p {
-		font-weight: 100;
-		color: #708090;
-	}
-
-	.projects {
-		width: 100%;
-		margin: 10px auto;
-		display: grid;
-		grid-gap: 1rem;
-		grid-template-columns: 1fr;
-		margin-bottom: 10px;
-	}
-
-	.techs > div {
-		margin: 0 0 0 10px;
-	}
-	@media (min-width: 900px) {
-        .list {
-            flex-direction: row;
-        }
-        main > h1 {
-            font-size: 48px;
-        }
-		.container {
-			padding: 0;
-		}
-	}
-</style>
+<section class="section section--alt">
+	<div class="container">
+		<div class="section-head">
+			<div class="kicker">Career</div>
+			<h2>함께할 동료를 찾습니다</h2>
+			<p class="lead">상시 채용을 진행하지 않더라도, 지원서는 항상 확인합니다</p>
+		</div>
+		<div class="actions">
+			<a class="btn" href="/career">Open positions</a>
+		</div>
+	</div>
+</section>
