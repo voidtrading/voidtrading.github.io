@@ -11,7 +11,19 @@ const organizationJsonLd = {
   logo: "https://www.void-trading.com/logo.png",
   image: "https://www.void-trading.com/og-v5.png",
   description:
-    "보이드트레이딩(VOID TRADING)은 정량 리서치와 소프트웨어 엔지니어링을 결합해 시장의 복잡성을 검증 가능한 시스템으로 전환하는 시스템 트레이딩 회사입니다. 알고리즘 트레이딩, ETP 유동성 공급·마켓메이킹, 주문·집행 인프라를 다룹니다.",
+    "보이드트레이딩(VOID TRADING)은 정량 리서치와 소프트웨어 엔지니어링을 결합해 시장의 복잡성을 검증 가능한 시스템으로 전환하는 시스템 트레이딩 회사입니다. 알고리즘 트레이딩, ETF LP 시스템, 마켓메이킹(Market Making) 시스템, 차익거래 시스템, 가상자산 주문 시스템 등 주문·집행 인프라를 다룹니다.",
+  knowsAbout: [
+    "알고리즘 트레이딩",
+    "시스템 트레이딩",
+    "ETF LP 시스템",
+    "ETP 유동성 공급",
+    "마켓메이킹 시스템",
+    "Market Making System",
+    "차익거래 시스템",
+    "가상자산 주문 시스템",
+    "OMS",
+    "저지연 트레이딩 인프라",
+  ],
   email: "void@void-trading.com",
   address: {
     "@type": "PostalAddress",
@@ -27,7 +39,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.void-trading.com"),
   title: "VOID-TRADING",
   description:
-    "보이드트레이딩(VOID TRADING)은 정량 리서치와 소프트웨어 엔지니어링을 결합해 시장의 복잡성을 검증 가능한 시스템으로 전환하는 시스템 트레이딩 회사입니다.",
+    "보이드트레이딩(VOID TRADING)은 정량 리서치와 소프트웨어 엔지니어링을 결합해 시장의 복잡성을 검증 가능한 시스템으로 전환하는 시스템 트레이딩 회사입니다. 알고리즘 트레이딩 · ETF LP · 마켓메이킹 · 차익거래 · 가상자산 주문 시스템.",
+  keywords: [
+    "VOID TRADING",
+    "보이드트레이딩",
+    "알고리즘 트레이딩",
+    "시스템 트레이딩",
+    "ETF LP 시스템",
+    "ETP 유동성 공급",
+    "마켓메이킹 시스템",
+    "Market Making 시스템",
+    "차익거래 시스템",
+    "가상자산 주문시스템",
+    "OMS",
+    "저지연 트레이딩 인프라",
+  ],
   openGraph: {
     type: "website",
     url: "/",

@@ -13,6 +13,7 @@ const systems = [
     items: [
       "국내외 거래소 다중 연결",
       "검증을 통과한 전략만 실거래 투입",
+      "차익거래 전략 시스템 운용",
       "규칙 기반 한도와 포지션 통제",
     ],
   },
@@ -21,7 +22,8 @@ const systems = [
     title: "Liquidity Engineering",
     subtitle: "ETP LP · 마켓메이킹",
     items: [
-      "ETF·ETN 유동성 공급 시스템",
+      "ETF·ETN 유동성 공급 시스템 (ETF LP)",
+      "마켓메이킹(Market Making) 호가 자동화",
       "스프레드와 헤지 비율 실시간 산출",
       "의무 이행 지표 상시 모니터링",
     ],
@@ -33,6 +35,7 @@ const systems = [
     items: [
       "저지연 주문 파이프라인",
       "OMS와 리스크 엔진",
+      "가상자산 거래소 주문 시스템",
       "백테스트와 실거래의 동일 코드 경로",
     ],
   },
