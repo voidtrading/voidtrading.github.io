@@ -59,7 +59,6 @@ export function SiteHeader({ active }: { active: string }) {
 export function SiteFooter() {
   return (
     <footer>
-      <BrandMark />
       <p>
         Curiosity <b>·</b> Passion <b>·</b> Edge
       </p>

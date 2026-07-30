@@ -3787,6 +3787,16 @@ p {
   }
 }
 
+
+/* Footer without the brand mark: motto left, colophon right. */
+footer {
+  grid-template-columns: auto 1fr;
+}
+
+footer p {
+  text-align: left;
+}
+
 /*
  * Page frame
  * On very wide screens the whole page is capped like an editorial sheet:
