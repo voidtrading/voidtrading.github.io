@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.void-trading.com"),
-  title: "VOID TRADING — Market Insight. Engineered.",
+  title: "VOID-TRADING",
   description:
     "정량 리서치와 소프트웨어 엔지니어링을 결합해 시장의 복잡성을 검증 가능한 시스템으로 전환합니다.",
   openGraph: {
