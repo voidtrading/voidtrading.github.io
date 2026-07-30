@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { BrandMark } from "../brand";
+import { SiteFooter, SiteHeader } from "../site-chrome";
 import {
   noticeScopeList,
   noticeScopes,
@@ -46,14 +45,7 @@ export default function NoticeArchive() {
 
   return (
     <main className="archive-page">
-      <header className="site-header">
-        <Link className="logo-link" href="/" aria-label="VOID TRADING 홈">
-          <BrandMark />
-        </Link>
-        <nav className="desktop-nav archive-nav" aria-label="아카이브 메뉴">
-          <Link href="/#notice">← Back to home</Link>
-        </nav>
-      </header>
+      <SiteHeader active="notice" />
 
       <section className="archive-body">
         <div className="chapter-divider" aria-hidden="true">
@@ -144,18 +136,7 @@ export default function NoticeArchive() {
         )}
       </section>
 
-      <footer>
-        <BrandMark />
-        <p>
-          Curiosity <b>·</b> Passion <b>·</b> Edge
-        </p>
-        <div>
-          <span>
-            Algorithmic Trading · Liquidity Engineering · Execution Technology
-          </span>
-          <span>© VOID TRADING Co., Ltd. 2026</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
