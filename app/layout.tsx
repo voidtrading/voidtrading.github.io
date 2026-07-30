@@ -49,6 +49,11 @@ export default function RootLayout({
           precedence="default"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
+        <link
+          rel="stylesheet"
+          precedence="default"
+          href="https://cdn.jsdelivr.net/npm/@fontsource/montserrat@5.2.8/800.css"
+        />
         {children}
       </body>
     </html>
