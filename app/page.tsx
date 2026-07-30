@@ -583,7 +583,7 @@ export default function Home() {
             </div>
             <div>
               <dt>ENTITY</dt>
-              <dd>VOID TRADING Co., Ltd.</dd>
+              <dd>VOID TRADING Co., Ltd. (보이드트레이딩)</dd>
             </div>
           </dl>
         </div>
