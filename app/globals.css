@@ -25,24 +25,6 @@ html {
   scroll-padding-top: 88px;
 }
 
-/* Gentle chapter alignment: the wheel always moves 1:1, and the page only
-   settles onto a section start when scrolling comes to rest nearby. */
-@media (min-width: 781px) {
-  html {
-    scroll-snap-type: y proximity;
-  }
-
-  .hero,
-  .section,
-  .contact-section {
-    scroll-snap-align: start;
-  }
-}
-
-html.is-menu-scrolling {
-  scroll-snap-type: none !important;
-}
-
 body {
   margin: 0;
   background: var(--paper);

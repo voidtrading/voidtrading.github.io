@@ -1,7 +1,7 @@
 "use client";
 
 import type { MouseEvent, ReactNode } from "react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { BrandMark } from "./brand";
 import { noticeScopeList, noticeScopes, sortedNotices } from "./notices";
 
@@ -131,7 +131,6 @@ function ChapterDivider({ label }: { label: string }) {
 export default function Home() {
   const [activeSection, setActiveSection] = useState("top");
   const [aboutView, setAboutView] = useState<"company" | "members">("company");
-  const navigationTimer = useRef<number | null>(null);
 
   useEffect(() => {
     let frame = 0;
@@ -164,10 +163,6 @@ export default function Home() {
 
     return () => {
       cancelAnimationFrame(frame);
-      if (navigationTimer.current !== null) {
-        window.clearTimeout(navigationTimer.current);
-      }
-      document.documentElement.classList.remove("is-menu-scrolling");
       window.removeEventListener("scroll", updateActiveSection);
       window.removeEventListener("resize", updateActiveSection);
     };
@@ -177,29 +172,18 @@ export default function Home() {
     const target = document.getElementById(sectionId);
     if (!target) return;
 
-    const root = document.documentElement;
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
     const targetTop =
       target.getBoundingClientRect().top + window.scrollY - 88;
 
-    if (navigationTimer.current !== null) {
-      window.clearTimeout(navigationTimer.current);
-    }
-
-    root.classList.add("is-menu-scrolling");
     setActiveSection(sectionId);
     window.history.replaceState(null, "", `#${sectionId}`);
     window.scrollTo({
       top: Math.max(0, targetTop),
       behavior: prefersReducedMotion ? "auto" : "smooth",
     });
-
-    navigationTimer.current = window.setTimeout(() => {
-      root.classList.remove("is-menu-scrolling");
-      navigationTimer.current = null;
-    }, prefersReducedMotion ? 80 : 900);
   }, []);
 
   const activeLabel =
