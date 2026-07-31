@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChapterDivider, SiteFooter, SiteHeader } from "../site-chrome";
+import { ChapterDivider, SectionHeading, SiteFooter, SiteHeader } from "../site-chrome";
 import {
   noticeScopeList,
   noticeScopes,
@@ -44,19 +44,17 @@ export default function NoticeArchive() {
       : sortedNotices.filter((notice) => notice.scope === filter);
 
   return (
-    <main className="archive-page">
+    <main>
       <SiteHeader active="notice" />
 
-      <section className="archive-body">
+      <section className="section notice-section" id="notice-archive">
         <ChapterDivider label="04 / NOTICE" />
-
-        <div className="archive-heading">
-          <p className="eyebrow">NOTICE ARCHIVE</p>
-          <h1>공지사항</h1>
-          <p className="section-lede">
-            VOID TRADING의 공식 소식과 채용 안내를 전합니다.
-          </p>
-        </div>
+        <SectionHeading
+          index="04"
+          eyebrow="NOTICE ARCHIVE"
+          title="공지사항"
+          description="VOID TRADING의 공식 소식과 채용 안내를 전합니다."
+        />
 
         <div className="archive-tabs" role="tablist" aria-label="공지 카테고리">
           <button
