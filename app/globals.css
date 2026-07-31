@@ -3875,8 +3875,34 @@ p {
 .notice-section .section-heading::before {
   background:
     linear-gradient(90deg, #fafafa 0 31%, rgba(250, 250, 250, 0.88) 48%, transparent 76%),
-    repeating-linear-gradient(180deg, transparent 0 30px, rgba(9, 9, 9, 0.06) 30px 31px),
-    linear-gradient(90deg, transparent 0 82%, rgba(232, 17, 15, 0.05) 82% 82.15%, transparent 82.3%);
+    repeating-linear-gradient(180deg, transparent 0 30px, rgba(9, 9, 9, 0.05) 30px 31px),
+    radial-gradient(circle at 84% 46%, var(--red) 0 4px, transparent 5px),
+    radial-gradient(circle at 84% 46%, transparent 0 25px, rgba(9, 9, 9, 0.16) 26px 27px, transparent 28px 52px, rgba(9, 9, 9, 0.1) 53px 54px, transparent 55px 84px, rgba(9, 9, 9, 0.06) 85px 86px, transparent 87px);
+}
+
+/* Notice: a broadcast ping — an announcement rippling outward. */
+.notice-section .section-heading::after {
+  animation: notice-ping 4s cubic-bezier(0.2, 0.55, 0.3, 1) infinite;
+  background: transparent;
+  border: 1px solid rgba(232, 17, 15, 0.55);
+  border-radius: 50%;
+  content: "";
+  height: 44px;
+  right: calc(16% - 22px);
+  top: calc(46% - 22px);
+  width: 44px;
+}
+
+@keyframes notice-ping {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.35);
+  }
+  75%,
+  100% {
+    opacity: 0;
+    transform: scale(6.5);
+  }
 }
 
 .contact-grid::before {
