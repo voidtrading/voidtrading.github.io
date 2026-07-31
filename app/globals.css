@@ -4076,6 +4076,17 @@ footer p {
   text-align: left;
 }
 
+@media (max-width: 780px) {
+  footer {
+    gap: 18px;
+    grid-template-columns: 1fr;
+  }
+
+  footer > div {
+    text-align: left;
+  }
+}
+
 /*
  * Page frame
  * On very wide screens the whole page is capped like an editorial sheet:

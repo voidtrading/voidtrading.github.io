@@ -77,6 +77,13 @@ export function SiteHeader({
     event.currentTarget.closest("details")?.removeAttribute("open");
   };
 
+  const scrollTopOnHome = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (window.location.pathname === "/") {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="site-header">
       <Link
@@ -84,6 +91,7 @@ export function SiteHeader({
         href="/"
         aria-label="VOID TRADING 홈"
         aria-current={active === "home" ? "page" : undefined}
+        onClick={scrollTopOnHome}
       >
         <BrandMark />
       </Link>
