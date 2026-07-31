@@ -3945,6 +3945,102 @@ p {
   border: 1px solid rgba(9, 9, 9, 0.08) !important;
 }
 
+
+/*
+ * Motion tempo
+ * Chapter figures move at hero-level presence: faster cycles, wider travel,
+ * and a visible pulse — the change should be noticeable at a glance.
+ */
+.about-section .section-heading::before {
+  animation-duration: 10s;
+}
+
+.systems-section .section-heading::before {
+  animation-duration: 11s;
+}
+
+.notice-section .section-heading::before {
+  animation-duration: 12s;
+}
+
+.career-section .section-heading::before {
+  animation:
+    chapter-field-drift 12s ease-in-out infinite alternate,
+    career-matrix-stream 7s linear infinite;
+  transform-origin: 82% 56%;
+}
+
+.contact-grid::before {
+  animation-duration: 10s;
+}
+
+.about-section .section-heading::after {
+  animation: about-constellation 8s ease-in-out infinite;
+}
+
+.systems-section .section-heading::after {
+  animation: systems-patrol 6.5s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+
+.career-section .section-heading::after {
+  animation: career-breathe 5s ease-in-out infinite;
+}
+
+.contact-grid::after {
+  animation: node-pulse 3.8s ease-in-out infinite;
+}
+
+@keyframes about-constellation {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+  25% {
+    opacity: 1;
+    transform: translate3d(34px, -18px, 0) scale(1.05);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translate3d(58px, 14px, 0) scale(0.96);
+  }
+  75% {
+    opacity: 1;
+    transform: translate3d(18px, 32px, 0) scale(1.03);
+  }
+}
+
+@keyframes systems-patrol {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  22%,
+  28% {
+    transform: translate3d(-60px, 0, 0) rotate(45deg);
+  }
+  50%,
+  56% {
+    transform: translate3d(-60px, 44px, 0) rotate(45deg);
+  }
+  78%,
+  84% {
+    transform: translate3d(0, 44px, 0) rotate(45deg);
+  }
+}
+
+@keyframes career-breathe {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translate3d(-4px, 12px, 0) scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(10px, -14px, 0) scale(1.15);
+  }
+}
+
 /*
  * Hybrid navigation structure
  * Desktop separates each menu into its own page; mobile keeps the classic
