@@ -1,10 +1,15 @@
 import Link from "next/link";
+import AboutSection from "./about/about-content";
+import CareerSection from "./career/career-section";
+import ContactSection from "./contact/contact-section";
+import NoticeBoardSection from "./notice/notice-board";
 import { SiteFooter, SiteHeader } from "./site-chrome";
+import SystemsSection from "./systems/systems-section";
 
 export default function Home() {
   return (
     <main>
-      <SiteHeader active="home" />
+      <SiteHeader active="home" spy />
 
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-rail">
@@ -65,16 +70,30 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-actions">
-              <Link className="text-link" href="/systems/">
+              <Link className="text-link only-desktop" href="/systems/">
                 Explore our systems <span aria-hidden="true">↗</span>
               </Link>
-              <Link className="text-link muted-link" href="/contact/">
+              <a className="text-link only-mobile" href="#systems">
+                Explore our systems <span aria-hidden="true">↗</span>
+              </a>
+              <Link className="text-link muted-link only-desktop" href="/contact/">
                 Start a conversation <span aria-hidden="true">→</span>
               </Link>
+              <a className="text-link muted-link only-mobile" href="#contact">
+                Start a conversation <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
+
+      <div className="mobile-flow">
+        <AboutSection />
+        <SystemsSection />
+        <CareerSection />
+        <NoticeBoardSection />
+        <ContactSection />
+      </div>
 
       <SiteFooter />
     </main>

@@ -3788,6 +3788,33 @@ p {
 }
 
 
+
+/*
+ * Hybrid navigation structure
+ * Desktop separates each menu into its own page; mobile keeps the classic
+ * continuous one-page flow. The home page carries every section and hides
+ * them beyond the mobile breakpoint.
+ */
+.only-mobile {
+  display: none !important;
+}
+
+@media (max-width: 780px) {
+  .only-mobile {
+    display: inline-flex !important;
+  }
+
+  .only-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 781px) {
+  .mobile-flow {
+    display: none;
+  }
+}
+
 /* Footer without the brand mark: motto left, colophon right. */
 footer {
   grid-template-columns: auto 1fr;
