@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SiteFooter, SiteHeader } from "../site-chrome";
+import { ChapterDivider, SiteFooter, SiteHeader } from "../site-chrome";
 import {
   noticeScopeList,
   noticeScopes,
@@ -48,11 +48,7 @@ export default function NoticeArchive() {
       <SiteHeader active="notice" />
 
       <section className="archive-body">
-        <div className="chapter-divider" aria-hidden="true">
-          <i />
-          <span />
-          <small>NOTICE / ARCHIVE</small>
-        </div>
+        <ChapterDivider label="04 / NOTICE" />
 
         <div className="archive-heading">
           <p className="eyebrow">NOTICE ARCHIVE</p>

@@ -3839,6 +3839,12 @@ p {
   }
 }
 
+
+/* The notice archive aligns with the other chapters' full-frame rhythm. */
+.archive-body {
+  max-width: none;
+}
+
 /*
  * Hybrid navigation structure
  * Desktop separates each menu into its own page; mobile keeps the classic
