@@ -3789,6 +3789,56 @@ p {
 
 
 
+
+/*
+ * Page-fit layout
+ * Every page works like the notice archive: a flex column exactly one
+ * viewport tall when content is short — the section grows, the chapter tail
+ * absorbs leftover space, and the footer sits at the bottom without forcing
+ * a scrollbar. Taller content scrolls naturally.
+ */
+@media (min-width: 781px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+  }
+
+  main > .site-header,
+  main > footer {
+    flex-shrink: 0;
+  }
+
+  main > .hero,
+  main > .section,
+  main > .contact-section {
+    flex: 1 0 auto;
+    min-height: 0;
+  }
+
+  .hero-main {
+    min-height: 0;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section::after {
+    flex: 1 0 0;
+  }
+
+  .contact-section::after {
+    flex: 1 0 0;
+    height: auto;
+  }
+
+  .contact-grid {
+    min-height: 0;
+  }
+}
+
 /*
  * Hybrid navigation structure
  * Desktop separates each menu into its own page; mobile keeps the classic
